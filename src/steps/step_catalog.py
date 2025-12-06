@@ -30,7 +30,7 @@ def step_verify_favorite_status_of_book(context, book_title, favorite_or_infavor
 def step_verify_book_is_in_catalog(context, title, author):
     context.catalog_page.verify_book_of_author_is_visible(title, author)
 
-@then('Catalog should have the following books:')
+@then('Catalog should have the following books')
 def step_verify_catalog_items(context):
     expected = [row['item'] for row in context.table]
     actual = context.catalog_page.all_books.all_inner_texts()
