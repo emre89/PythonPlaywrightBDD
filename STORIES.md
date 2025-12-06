@@ -3,8 +3,8 @@
 ## US1: Catalog
 
 As a user
-I want to see a list of books
-So that I can choose my favorites
+I want to see a catalog
+Where I can choose my favorites
 
 ## US2: Add new book
 
