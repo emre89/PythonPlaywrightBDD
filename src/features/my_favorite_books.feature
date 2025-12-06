@@ -1,5 +1,7 @@
 Feature: Favorite books
-	As a user I should be able to add/remove books to/from my favorites list
+	As a user 
+	I should be able to add/remove books to/from my favorites list 
+	So that I can update my favorite book list
 
 	Background:
 		Given I visit the website

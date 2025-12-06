@@ -1,5 +1,7 @@
 Feature: Favorite books
-	As a user I should be able to add new books
+	As a user
+	I want to add a new book to the catalog
+	So that it is added to the end of the catalog
 
 	Background:
 		Given I visit the website
