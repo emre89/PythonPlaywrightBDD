@@ -10,7 +10,7 @@ def step_navigate_to_catalog_page(context):
 def step_click_nth_favorite_button_x_times(context,n,x):
     context.catalog_page.click_nth_favorite_button_x_times(n,x)
 
-@then('I should see "{x}" books in the list')
+@then('I should see "{x}" books in the catalog')
 def step_verify_book_count(context, x):
     context.catalog_page.verify_book_list_has_x_items(x)
 
