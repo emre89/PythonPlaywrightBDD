@@ -20,7 +20,7 @@ Feature: Navigation between different pages
     When I navigate to my books page
     Then I should see the header section
     And Selected button should have text "Mina böcker"
-    And My favorite books list should be empty
+    And My books list should be empty
 
     
 

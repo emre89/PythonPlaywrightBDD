@@ -9,13 +9,16 @@ class AddBookPage(BasePage):
         self.author_input = page.get_by_test_id('add-input-author')
         self.submit_button = page.get_by_role('button', name=' Lägg till ny bok ')
     
-    
     def verify_add_book_form_loaded(self):
         expect(self.submit_button).to_be_disabled()
         expect(self.submit_button).to_be_visible()
         expect(self.title_input).to_be_visible()
         expect(self.author_input).to_be_visible()
 
+    def add_book(self, title, author):
+        self.title_input.fill(title)
+        self.author_input.fill(author)
+        self.submit_button.click()
 
     def go_to_home_page(self):
         return super().go_to_home_page()

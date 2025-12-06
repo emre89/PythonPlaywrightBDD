@@ -9,3 +9,7 @@ def step_navigate_to_add_book_page(context):
 @then('I should see the add book form')
 def step_verify_add_book_form_loaded(context):
     context.add_book_page.verify_add_book_form_loaded()
+
+@when('I add a new book "{title}" of author "{author}"')
+def step_add_book(context, title, author):
+    context.add_book_page.add_book(title,author)

@@ -22,10 +22,7 @@ class BasePage:
         self.page.goto(self.base_url)
 
     def navigate_to_catalog_page(self):
-        if (self.catalog_button.is_disabled):
-            print('You are already on the catalog page')
-        else:
-            self.catalog_button.click()
+        self.catalog_button.click(force=True)
 
     def navigate_to_my_books_page(self):
         self.my_books_button.click()

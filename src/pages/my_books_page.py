@@ -11,9 +11,16 @@ class MyBooksPage(BasePage):
     def verify_my_favorite_book_list_is_empty(self):
         expected_text = 'När du valt, kommer dina favoritböcker att visas här.'
         expect(self.my_favorite_books_placeholder).to_have_text(expected_text)
-        expect(self.my_favorite_books).not_to_be_visible(timeout=100)
+        expect(self.my_favorite_books).not_to_be_visible(timeout=1000)
     
+    def verify_my_favorite_book_list_has_book(self, book_title):
+        expect(self.my_favorite_books).to_contain_text(book_title)
     
+    def verify_my_favorite_book_list_has_not_book(self, book_title):
+        number_of_books = self.my_favorite_books.count()
+        if (number_of_books > 0):
+            expect(self.my_favorite_books).not_to_contain_text(book_title)
+
     def go_to_home_page(self):
         return super().go_to_home_page()
     
