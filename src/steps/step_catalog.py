@@ -6,7 +6,7 @@ from playwright.sync_api import sync_playwright
 def step_navigate_to_catalog_page(context):
     context.catalog_page.navigate_to_catalog_page()
 
-@when('I click "{n}" th favorite buttun "{x}" times')
+@when('I click "{n}" th favorite button "{x}" times')
 def step_click_nth_favorite_button_x_times(context,n,x):
     context.catalog_page.click_nth_favorite_button_x_times(n,x)
 

@@ -7,7 +7,7 @@ from pages.my_books_page import MyBooksPage
 def before_all(context):
     context.playwright = sync_playwright().start()
     context.browser_type = context.playwright.chromium
-    context.browser = context.browser_type.launch(headless=False)
+    context.browser = context.browser_type.launch(headless=True)
 
 def before_scenario(context, scenario):
     context.page = context.browser.new_page()
